@@ -3,7 +3,6 @@ package tile;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
-import javafx.scene.shape.Rectangle;
 import sprite.Sprite;
 
 import static tower.app.TowerDefenseApp.TILE_SIZE;
@@ -51,11 +50,35 @@ public class Tile extends StackPane {
         Image tile = null;
 
         switch (type){
-            case GRASS:
-                tile = new Image ("/tiles/towerDefense_tile024.png");
+            case tile119: //Grass
+                tile = new Image ("/tiles/towerDefense_tile119.png");
                 break;
-            case DIRT:
+            case tile093: //Dirt
                 tile = new Image ("/tiles/towerDefense_tile093.png");
+                break;
+            case tile116: //Grass bottom
+                tile = new Image ("/tiles/towerDefense_tile116.png");
+                break;
+            case tile070: //Grass top
+                tile = new Image ("/tiles/towerDefense_tile070.png");
+                break;
+            case tile092: //Grass left
+                tile = new Image ("/tiles/towerDefense_tile092.png");
+                break;
+            case tile094: //Grass right
+                tile = new Image ("/tiles/towerDefense_tile094.png");
+                break;
+            case tile069: //Grass top left corner
+                tile = new Image ("/tiles/towerDefense_tile069.png");
+                break;
+            case tile071: //Grass top right corner
+                tile = new Image ("/tiles/towerDefense_tile071.png");
+                break;
+            case tile115: //Grass bottom left corner
+                tile = new Image ("/tiles/towerDefense_tile115.png");
+                break;
+            case tile117: //Grass bottom right corner
+                tile = new Image ("/tiles/towerDefense_tile117.png");
                 break;
         }
         iv.setImage(tile);

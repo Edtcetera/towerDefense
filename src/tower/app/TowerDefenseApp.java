@@ -38,6 +38,7 @@ public class TowerDefenseApp extends Application {
             }
         }
 
+        //TODO: change level editor, instead of coordinates use ASCII visual
         readLevelFile("./assets/levels/level01.txt" , tileGroup, board);
 
 
@@ -47,63 +48,6 @@ public class TowerDefenseApp extends Application {
         Tile dirtTile = new Tile(TileType.tile093, 2, 0);
         board[2][0] = dirtTile;
         tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 2, 1);
-        board[2][1] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 2, 2);
-        board[2][2] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 2, 3);
-        board[2][3] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 2, 4);
-        board[2][4] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 3, 4);
-        board[3][4] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 4, 4);
-        board[4][4] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 5, 4);
-        board[5][4] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 6, 4);
-        board[6][4] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 6, 5);
-        board[6][5] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 6, 6);
-        board[6][6] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 6, 7);
-        board[6][7] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 6, 8);
-        board[6][8] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        dirtTile = new Tile(TileType.tile093, 6, 9);
-        board[6][9] = dirtTile;
-        tileGroup.getChildren().add(dirtTile);
-        Tile sideTileLeft = new Tile(TileType.tile092, 1,0);
-        board[1][0] = sideTileLeft;
-        tileGroup.getChildren().add(sideTileLeft);
-        sideTileLeft = new Tile(TileType.tile092, 1,1);
-        board[1][0] = sideTileLeft;
-        tileGroup.getChildren().add(sideTileLeft);
-        sideTileLeft = new Tile(TileType.tile092, 1,2);
-        board[1][0] = sideTileLeft;
-        tileGroup.getChildren().add(sideTileLeft);
-        sideTileLeft = new Tile(TileType.tile092, 1,3);
-        board[1][0] = sideTileLeft;
-        tileGroup.getChildren().add(sideTileLeft);
-        sideTileLeft = new Tile(TileType.tile092, 1,4);
-        board[1][0] = sideTileLeft;
-        tileGroup.getChildren().add(sideTileLeft);
-        sideTileLeft = new Tile(TileType.tile092, 5,6);
-        board[5][6] = sideTileLeft;
-        tileGroup.getChildren().add(sideTileLeft);
         */
 
         return root;

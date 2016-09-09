@@ -81,11 +81,20 @@ public class TowerDefenseApp extends Application {
 
         Tile tile = null;
         switch(tileType){
-            case 93: //dirt path
-                tile = new Tile(TileType.tile093, xTile, yTile);
-                board[xTile][yTile] = tile;
+            case 25: //left grass
+                tile = new Tile(TileType.tile025, xTile, yTile);
+                //board[xTile][yTile] = tile;
+                break;
+            case 26: //grass left bottom
+                tile = new Tile(TileType.tile026, xTile, yTile);
+                //board[xTile][yTile] = tile;
+                break;
+            case 1: //grass bottom
+                tile = new Tile(TileType.tile001, xTile, yTile);
+                //board[xTile][yTile] = tile;
                 break;
         }
+        board[xTile][yTile] = tile;
 
         if (tile != null){
             tileGroup.getChildren().add(tile);

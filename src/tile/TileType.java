@@ -15,5 +15,8 @@ public enum TileType {
     tile003, //grass top left
     tile004, //grass top right
     tile026, //grass bottom left corner
-    tile027  //grass bottom right corner
+    tile027,  //grass bottom right corner
+    tile135, //rock1
+    tile136, //rock2
+    tile137 //rock3
 }

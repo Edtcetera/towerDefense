@@ -22,6 +22,7 @@ public class TowerDefenseApp extends Application {
     private Tile[][] board = new Tile[WIDTH][HEIGHT];
     private Group tileGroup = new Group();
     private Group spriteGroup = new Group(); //TODO:
+    private boolean gameStatus = true;
 
     private Parent createContent(){
         //TODO: scale to a level index file which points to different levels
@@ -30,7 +31,16 @@ public class TowerDefenseApp extends Application {
         root.setPrefSize(WIDTH * TILE_SIZE, HEIGHT * TILE_SIZE);
         root.getChildren().addAll(tileGroup);
 
+        for (int y = 0; y < HEIGHT; y++){
+            for (int x = 0; x < WIDTH; x++){
+                Tile tile = new Tile(TileType.tile231, x, y);
+                board[x][y] = tile;
+                tileGroup.getChildren().add(tile);
+            }
+        }
+
         levelParser.readLevelFile();
+        //TODO: create UI
 
         return root;
     }
@@ -39,6 +49,7 @@ public class TowerDefenseApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Scene scene = new Scene(createContent());
+
         primaryStage.setTitle("Tower Defense");
         primaryStage.setScene(scene);
         primaryStage.show();

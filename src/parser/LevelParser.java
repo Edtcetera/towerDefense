@@ -71,8 +71,16 @@ public class LevelParser {
                 case 1: //grass bottom
                     tile = new Tile(TileType.tile001, levelX, levelY);
                     break;
-                case 0: //grass
-                    tile = new Tile(TileType.tile231, levelX, levelY);
+                case 0: //nothing, use base
+                    break;
+                case 135: //rock1
+                    tile = new Tile(TileType.tile135, levelX, levelY);
+                    break;
+                case 136: //rock2
+                    tile = new Tile(TileType.tile136, levelX, levelY);
+                    break;
+                case 137: //rock3
+                    tile = new Tile(TileType.tile137, levelX, levelY);
                     break;
             }
             board[levelX][levelY] = tile;

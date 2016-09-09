@@ -47,16 +47,31 @@ public class LevelParser {
 
             Tile tile = null;
             switch (tileType) {
+                case 2: //grass bottom left corner
+                    tile = new Tile(TileType.tile002, levelX, levelY);
+                    break;
+                case 4: //grass top right corner
+                    tile = new Tile(TileType.tile004, levelX, levelY);
+                    break;
                 case 25: //left grass
                     tile = new Tile(TileType.tile025, levelX, levelY);
+                    break;
+                case 23: //right grass
+                    tile = new Tile(TileType.tile023, levelX, levelY);
                     break;
                 case 26: //grass left bottom
                     tile = new Tile(TileType.tile026, levelX, levelY);
                     break;
+                case 46: //grass top right corner
+                    tile = new Tile(TileType.tile046, levelX, levelY);
+                    break;
+                case 47: //grass top
+                    tile = new Tile(TileType.tile047, levelX, levelY);
+                    break;
                 case 1: //grass bottom
                     tile = new Tile(TileType.tile001, levelX, levelY);
                     break;
-                case 231: //grass
+                case 0: //grass
                     tile = new Tile(TileType.tile231, levelX, levelY);
                     break;
             }

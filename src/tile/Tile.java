@@ -59,6 +59,12 @@ public class Tile extends StackPane {
             case tile001: //Grass bottom
                 tile = new Image ("/tiles/towerDefense_tile001.png");
                 break;
+            case tile002: //grass bottom left corner
+                tile = new Image ("/tiles/towerDefense_tile002.png");
+                break;
+            case tile046: //Grass top right corner
+                tile = new Image("/tiles/towerDefense_tile046.png");
+                break;
             case tile047: //Grass top
                 tile = new Image ("/tiles/towerDefense_tile047.png");
                 break;

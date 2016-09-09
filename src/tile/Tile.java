@@ -50,35 +50,35 @@ public class Tile extends StackPane {
         Image tile = null;
 
         switch (type){
-            case tile119: //Grass
-                tile = new Image ("/tiles/towerDefense_tile119.png");
+            case tile231: //Grass finished
+                tile = new Image ("/tiles/towerDefense_tile231.png");
                 break;
             case tile093: //Dirt
                 tile = new Image ("/tiles/towerDefense_tile093.png");
                 break;
-            case tile116: //Grass bottom
-                tile = new Image ("/tiles/towerDefense_tile116.png");
+            case tile001: //Grass bottom
+                tile = new Image ("/tiles/towerDefense_tile001.png");
                 break;
-            case tile070: //Grass top
-                tile = new Image ("/tiles/towerDefense_tile070.png");
+            case tile047: //Grass top
+                tile = new Image ("/tiles/towerDefense_tile047.png");
                 break;
-            case tile092: //Grass left
-                tile = new Image ("/tiles/towerDefense_tile092.png");
+            case tile025: //Grass left
+                tile = new Image ("/tiles/towerDefense_tile025.png");
                 break;
-            case tile094: //Grass right
-                tile = new Image ("/tiles/towerDefense_tile094.png");
+            case tile023: //Grass right
+                tile = new Image ("/tiles/towerDefense_tile023.png");
                 break;
-            case tile069: //Grass top left corner
-                tile = new Image ("/tiles/towerDefense_tile069.png");
+            case tile003: //Grass top left corner
+                tile = new Image ("/tiles/towerDefense_tile003.png");
                 break;
-            case tile071: //Grass top right corner
-                tile = new Image ("/tiles/towerDefense_tile071.png");
+            case tile004: //Grass top right corner
+                tile = new Image ("/tiles/towerDefense_tile004.png");
                 break;
-            case tile115: //Grass bottom left corner
-                tile = new Image ("/tiles/towerDefense_tile115.png");
+            case tile026: //Grass bottom left corner
+                tile = new Image ("/tiles/towerDefense_tile026.png");
                 break;
-            case tile117: //Grass bottom right corner
-                tile = new Image ("/tiles/towerDefense_tile117.png");
+            case tile027: //Grass bottom right corner
+                tile = new Image ("/tiles/towerDefense_tile027.png");
                 break;
         }
         iv.setImage(tile);

@@ -32,7 +32,7 @@ public class TowerDefenseApp extends Application {
 
         for (int y = 0; y < HEIGHT; y++){ //set everything as grass ground
             for (int x = 0; x < WIDTH; x++){
-                Tile tile = new Tile(TileType.tile119, x, y);
+                Tile tile = new Tile(TileType.tile231, x, y);
                 board[x][y] = tile;
                 tileGroup.getChildren().add(tile);
             }
@@ -81,7 +81,7 @@ public class TowerDefenseApp extends Application {
 
         Tile tile = null;
         switch(tileType){
-            case 93:
+            case 93: //dirt path
                 tile = new Tile(TileType.tile093, xTile, yTile);
                 board[xTile][yTile] = tile;
                 break;

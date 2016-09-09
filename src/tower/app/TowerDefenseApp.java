@@ -24,20 +24,13 @@ public class TowerDefenseApp extends Application {
     private Group spriteGroup = new Group(); //TODO:
 
     private Parent createContent(){
+        //TODO: scale to a level index file which points to different levels
+        levelParser = new LevelParser("./assets/levels/level01.txt" , tileGroup, board);
         Pane root = new Pane();
         root.setPrefSize(WIDTH * TILE_SIZE, HEIGHT * TILE_SIZE);
         root.getChildren().addAll(tileGroup);
 
-        for (int y = 0; y < HEIGHT; y++){ //set everything as grass ground
-            for (int x = 0; x < WIDTH; x++){
-                Tile tile = new Tile(TileType.tile231, x, y);
-                board[x][y] = tile;
-                tileGroup.getChildren().add(tile);
-            }
-        }
-
-        //TODO: change level editor, instead of coordinates use ASCII visual
-        levelParser.readLevelFile("./assets/levels/level01.txt" , tileGroup, board);
+        levelParser.readLevelFile();
 
         return root;
     }

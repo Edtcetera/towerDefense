@@ -1,5 +1,6 @@
 package tile;
 
+import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -14,6 +15,8 @@ public class Tile extends Node {
     private ImageView tile;
     private Image image;
     private TileType type;
+    private int locX;
+    private int locY;
 
     public TileType getType() {
         return type;
@@ -46,7 +49,9 @@ public class Tile extends Node {
 
 
     public Tile(TileType type, int x, int y) {
-        super(x, y);
+        super();
+        locX = x;
+        locY = y;
         this.type = type;
         setWidth(TILE_SIZE);
         setHeight(TILE_SIZE);
@@ -58,10 +63,14 @@ public class Tile extends Node {
         tile.setPreserveRatio(true);
         setTileType(type);
 
-        hoverImageConstruction();
+        hoverImage();
+        towerMouseListener();
     }
 
-    private void hoverImageConstruction() {
+    /**
+     * abstract class hoverImage method
+     */
+    private void hoverImage() {
         /**
          * hover image on valid (grass) tile for construction or action. Tiles not valid
          * for construction is dirt, side path, tiles with rocks, trees etc.
@@ -73,6 +82,14 @@ public class Tile extends Node {
                 setOnMouseExited(f -> {
                     setTile(new Image("/tiles/towerDefense_tile231.png"));
                 });
+            }
+        });
+    }
+
+    private void towerMouseListener(){
+        setOnMouseClicked(e -> {
+            if (isGrass()){
+                Tower foundation = new Tower(TowerType.tile180, locX, locY);
             }
         });
     }

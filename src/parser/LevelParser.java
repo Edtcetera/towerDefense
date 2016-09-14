@@ -1,6 +1,7 @@
 package parser;
 
 import javafx.scene.Group;
+import tile.Node;
 import tile.Tile;
 import tile.TileType;
 import tower.app.TowerDefenseApp;
@@ -16,9 +17,9 @@ import static tower.app.TowerDefenseApp.WIDTH;
 public class LevelParser {
     String filePath;
     Group tileGroup;
-    Tile[][] board;
+    Node[][] board;
 
-    public LevelParser(String filePath, Group tileGroup, Tile[][] board){
+    public LevelParser(String filePath, Group tileGroup, Node[][] board){
         this.filePath = filePath;
         this.tileGroup = tileGroup;
         this.board = board;
@@ -40,7 +41,7 @@ public class LevelParser {
         }
     }
 
-    private void handleLine(String line, int levelY, Group tileGroup, Tile[][] board) {
+    private void handleLine(String line, int levelY, Group tileGroup, Node[][] board) {
         String[] levelLine = line.split("\\|", WIDTH);
 
         for (int levelX = 0; levelX < WIDTH; levelX++) {
@@ -90,7 +91,7 @@ public class LevelParser {
             }
             board[levelX][levelY] = tile;
 
-            if (tile != null) {
+            if (tile != null){
                 tileGroup.getChildren().add(tile);
             }
         }

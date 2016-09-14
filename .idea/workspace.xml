@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="787de8a4-3618-4ac8-8a0a-40248d7c5e6e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/LevelParser.java" afterPath="$PROJECT_DIR$/src/parser/LevelParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tile/Node.java" afterPath="$PROJECT_DIR$/src/tile/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tile/Tile.java" afterPath="$PROJECT_DIR$/src/tile/Tile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tile/Tower.java" afterPath="$PROJECT_DIR$/src/tile/Tower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tower/app/TowerDefenseApp.java" afterPath="$PROJECT_DIR$/src/tower/app/TowerDefenseApp.java" />
     </list>
     <ignored path="TowerDefense.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,14 +31,14 @@
     <favorites_list name="TowerDefense" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45395273">
+    <splitter split-orientation="horizontal" split-proportion="0.48655257">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="LevelParser.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/parser/LevelParser.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+                  <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -42,15 +46,27 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Tower.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/tile/Tower.java">
+          <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/tile/Tile.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+                  <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#912#913#0" expanded="true" />
-                    <element signature="e#951#952#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Tower.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/tile/Tower.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.8529638">
+                  <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1016#1017#0" expanded="true" />
+                    <element signature="e#1043#1044#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -60,23 +76,19 @@
             <entry file="file://$PROJECT_DIR$/src/tile/TowerType.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+                  <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Node.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/tile/Node.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4199102">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#439#440#0" expanded="true" />
-                    <element signature="e#466#467#0" expanded="true" />
-                    <element signature="e#496#497#0" expanded="true" />
-                    <element signature="e#524#525#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -96,52 +108,16 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-          <file leaf-file-name="TowerDefenseApp.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="TowerDefenseApp.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tower/app/TowerDefenseApp.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.5342571">
+                  <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#808#809#0" expanded="true" />
-                    <element signature="e#836#837#0" expanded="true" />
+                    <element signature="e#739#740#0" expanded="true" />
+                    <element signature="e#767#768#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Tile.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/tile/Tile.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.12350299">
-                  <caret line="11" column="12" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="12" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#388#389#0" expanded="true" />
-                    <element signature="e#415#416#0" expanded="true" />
-                    <element signature="e#457#458#0" expanded="true" />
-                    <element signature="e#489#490#0" expanded="true" />
-                    <element signature="e#522#523#0" expanded="true" />
-                    <element signature="e#558#559#0" expanded="true" />
-                    <element signature="e#589#590#0" expanded="true" />
-                    <element signature="e#617#618#0" expanded="true" />
-                    <element signature="e#658#659#0" expanded="true" />
-                    <element signature="e#692#693#0" expanded="true" />
-                    <element signature="e#727#728#0" expanded="true" />
-                    <element signature="e#754#755#0" expanded="true" />
-                    <element signature="e#794#795#0" expanded="true" />
-                    <element signature="e#830#831#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="StackPane.java" pinned="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/layout/StackPane.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="131" column="34" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -151,16 +127,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
                   <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/Integer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="591" column="0" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -201,13 +167,13 @@
         <option value="$PROJECT_DIR$/src/sprite/TowerType.java" />
         <option value="$PROJECT_DIR$/src/tile/TileType.java" />
         <option value="$PROJECT_DIR$/assets/levels/level01.txt" />
-        <option value="$PROJECT_DIR$/src/parser/LevelParser.java" />
         <option value="$PROJECT_DIR$/src/sprite/Tower.java" />
         <option value="$PROJECT_DIR$/src/tile/TowerType.java" />
-        <option value="$PROJECT_DIR$/src/tile/Tower.java" />
         <option value="$PROJECT_DIR$/src/tower/app/TowerDefenseApp.java" />
+        <option value="$PROJECT_DIR$/src/parser/LevelParser.java" />
         <option value="$PROJECT_DIR$/src/tile/Tile.java" />
         <option value="$PROJECT_DIR$/src/tile/Node.java" />
+        <option value="$PROJECT_DIR$/src/tile/Tower.java" />
       </list>
     </option>
   </component>
@@ -242,52 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="towerDefense">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="towerDefense">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="towerDefense">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="sprite">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -340,6 +260,52 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="sprite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="towerDefense">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="towerDefense">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="towerDefense">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="sprite">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -728,7 +694,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.50157607" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18584071" sideWeight="0.49842396" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20288184" sideWeight="0.49842396" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1698241" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -761,38 +727,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="16" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/levels/level01.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/shape/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1188" column="0" selection-start-line="1188" selection-start-column="0" selection-end-line="1188" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tile/Tower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tile/TowerType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -807,8 +746,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -819,20 +758,6 @@
           <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -866,8 +791,8 @@
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -878,20 +803,6 @@
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,8 +813,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -930,8 +841,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -956,20 +867,6 @@
           <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -980,8 +877,8 @@
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1101,7 +998,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="591" column="0" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#60784#0" expanded="false" />
+            <element signature="e#6101#6102#0" expanded="false" />
+            <element signature="e#6171#6172#0" expanded="false" />
+            <element signature="e#7967#7968#0" expanded="false" />
+            <element signature="e#8013#8014#0" expanded="false" />
+            <element signature="e#9482#9483#0" expanded="false" />
+            <element signature="e#9528#9529#0" expanded="false" />
+            <element signature="e#10902#10903#0" expanded="false" />
+            <element signature="e#10948#10949#0" expanded="false" />
+            <element signature="e#15724#15725#0" expanded="false" />
+            <element signature="e#15779#15780#0" expanded="false" />
+            <element signature="e#32532#32533#0" expanded="false" />
+            <element signature="e#32566#32567#0" expanded="false" />
+            <element signature="e#33488#33489#0" expanded="false" />
+            <element signature="e#33522#33523#0" expanded="false" />
+            <element signature="e#33736#33737#0" expanded="false" />
+            <element signature="e#33771#33772#0" expanded="false" />
+            <element signature="e#33891#33892#0" expanded="false" />
+            <element signature="e#33919#33920#0" expanded="false" />
+            <element signature="e#34168#34169#0" expanded="false" />
+            <element signature="e#34202#34203#0" expanded="false" />
+            <element signature="e#34414#34415#0" expanded="false" />
+            <element signature="e#34449#34450#0" expanded="false" />
+            <element signature="e#34664#34665#0" expanded="false" />
+            <element signature="e#34700#34701#0" expanded="false" />
+            <element signature="e#35161#35162#0" expanded="false" />
+            <element signature="e#35199#35200#0" expanded="false" />
+            <element signature="e#35486#35487#0" expanded="false" />
+            <element signature="e#35532#35533#0" expanded="false" />
+            <element signature="e#35824#35825#0" expanded="false" />
+            <element signature="e#35852#35853#0" expanded="false" />
+            <element signature="e#37816#37817#0" expanded="false" />
+            <element signature="e#37859#37860#0" expanded="false" />
+            <element signature="e#46394#46395#0" expanded="false" />
+            <element signature="e#46458#46459#0" expanded="false" />
+            <element signature="e#47036#47037#0" expanded="false" />
+            <element signature="e#47092#47093#0" expanded="false" />
+            <element signature="e#47615#47616#0" expanded="false" />
+            <element signature="e#47675#47676#0" expanded="false" />
+            <element signature="e#48444#48445#0" expanded="false" />
+            <element signature="e#48491#48492#0" expanded="false" />
+            <element signature="e#56465#56466#0" expanded="false" />
+            <element signature="e#56523#56524#0" expanded="false" />
+            <element signature="e#57650#57651#0" expanded="false" />
+            <element signature="e#57708#57709#0" expanded="false" />
+            <element signature="e#59796#59797#0" expanded="false" />
+            <element signature="e#59824#59825#0" expanded="false" />
+            <element signature="e#60191#60192#0" expanded="false" />
+            <element signature="e#60228#60229#0" expanded="false" />
+            <element signature="e#60595#60596#0" expanded="false" />
+            <element signature="e#60632#60633#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1112,10 +1061,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/layout/Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <element signature="e#3939#3940#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/layout/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="456" column="0" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/Parent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1286" column="0" selection-start-line="1286" selection-start-column="0" selection-end-line="1286" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2343" column="0" selection-start-line="2343" selection-start-column="0" selection-end-line="2343" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/layout/StackPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54238755">
+          <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding>
+            <element signature="e#7337#7338#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/levels/level01.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tile/TowerType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1128,73 +1129,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tile/TowerType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/layout/StackPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="131" column="34" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/layout/Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33308384">
-          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tile/Tower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tower/app/TowerDefenseApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.5342571">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tile/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12350299">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1202,7 +1154,7 @@
     <entry file="file://$PROJECT_DIR$/src/parser/LevelParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1211,14 +1163,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tile/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4199102">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tile/Tower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8529638">
+          <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
           </folding>
         </state>
       </provider>

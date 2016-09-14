@@ -1,4 +1,4 @@
-package sprite;
+package tile;
 
 /**
  * Created by edwar on 9/7/2016.

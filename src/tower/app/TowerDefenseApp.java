@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import tile.Tower;
+import tile.TowerType;
 import tile.Tile;
 import tile.TileType;
 import parser.LevelParser;
@@ -19,10 +21,14 @@ public class TowerDefenseApp extends Application {
     public static final int WIDTH = 15;
     public static final int HEIGHT = 15;
     private LevelParser levelParser;
-    private Tile[][] board = new Tile[WIDTH][HEIGHT];
-    private Group tileGroup = new Group();
-    private Group spriteGroup = new Group(); //TODO:
+    private static Tile[][] board = new Tile[WIDTH][HEIGHT];
+    private static Group tileGroup = new Group();
+    private static Group spriteGroup = new Group();
     private boolean gameStatus = true;
+
+    public static Tile[][] getBoard(){
+        return board;
+    }
 
     private Parent createContent(){
         //TODO: scale to a level index file which points to different levels
@@ -41,6 +47,8 @@ public class TowerDefenseApp extends Application {
 
         levelParser.readLevelFile();
         //TODO: create UI
+
+        //board[1][1] = new Tower(TowerType.tile180, 1, 1);
 
         return root;
     }

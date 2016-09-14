@@ -8,6 +8,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import static tower.app.TowerDefenseApp.WIDTH;
+
 /**
  * Created by edwar on 9/9/2016.
  */
@@ -39,9 +41,9 @@ public class LevelParser {
     }
 
     private void handleLine(String line, int levelY, Group tileGroup, Tile[][] board) {
-        String[] levelLine = line.split("\\|", TowerDefenseApp.WIDTH);
+        String[] levelLine = line.split("\\|", WIDTH);
 
-        for (int levelX = 0; levelX < TowerDefenseApp.WIDTH; levelX++) {
+        for (int levelX = 0; levelX < WIDTH; levelX++) {
             String sTileType = levelLine[levelX];
             int tileType = Integer.parseInt(sTileType);
 

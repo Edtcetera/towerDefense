@@ -8,7 +8,8 @@ import tower.app.TowerDefenseApp;
 /**
  * Created by edwar on 9/13/2016.
  */
-public class Node extends StackPane {
+//TODO: complete abstract class
+public abstract class Node extends StackPane {
     private Tile[][] board;
     private ImageView tile;
     private Image image;

@@ -3,7 +3,7 @@ package parser;
 import javafx.scene.Group;
 import tile.Tile;
 import tile.TileType;
-
+import tower.app.TowerDefenseApp;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -39,9 +39,9 @@ public class LevelParser {
     }
 
     private void handleLine(String line, int levelY, Group tileGroup, Tile[][] board) {
-        String[] levelLine = line.split("\\|", 10);
+        String[] levelLine = line.split("\\|", TowerDefenseApp.WIDTH);
 
-        for (int levelX = 0; levelX < 10; levelX++) {
+        for (int levelX = 0; levelX < TowerDefenseApp.WIDTH; levelX++) {
             String sTileType = levelLine[levelX];
             int tileType = Integer.parseInt(sTileType);
 
@@ -81,6 +81,9 @@ public class LevelParser {
                     break;
                 case 137: //rock3
                     tile = new Tile(TileType.tile137, levelX, levelY);
+                    break;
+                case 50: //dirt
+                    tile = new Tile(TileType.tile050, levelX, levelY);
                     break;
             }
             board[levelX][levelY] = tile;

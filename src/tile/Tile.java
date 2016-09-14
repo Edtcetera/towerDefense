@@ -13,6 +13,7 @@ import static tower.app.TowerDefenseApp.TILE_SIZE;
 public class Tile extends StackPane {
     private Tower tower;
     private ImageView tile;
+    private Image tileType;
     private TileType type;
 
     public TileType getType() {
@@ -47,6 +48,7 @@ public class Tile extends StackPane {
         tile.setImage(image);
     }
 
+
     public Tile(TileType type, int x, int y) {
         this.type = type;
         setWidth(TILE_SIZE);
@@ -57,6 +59,41 @@ public class Tile extends StackPane {
         tile = new ImageView();
         tile.setFitHeight(TILE_SIZE);
         tile.setPreserveRatio(true);
+        setTileType(type);
+
+        hoverImageConstruction();
+    }
+
+    private void hoverImageConstruction() {
+        /**
+         * hover image on valid (grass) tile for construction or action. Tiles not valid
+         * for construction is dirt, side path, tiles with rocks, trees etc.
+         * When mouse exits tile, revert back to grass tile
+         */
+        setOnMouseEntered(e -> {
+            if (isGrass()){
+                setTile(new Image("/tiles/towerDefense_tile042.png"));
+                setOnMouseExited(f -> {
+                    setTile(new Image("/tiles/towerDefense_tile231.png"));
+                });
+            }
+        });
+    }
+
+    private boolean isGrass(){
+        if (getType() == TileType.tile231){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    /**
+     * Sets image assets as Image
+     * @param type
+     */
+    private void setTileType(TileType type){
         Image tileImage = null;
 
         switch (type) {
@@ -105,14 +142,14 @@ public class Tile extends StackPane {
             case tile137: //rock3
                 tileImage = new Image("/tiles/towerDefense_tile137.png");
                 break;
+            case tile050: //dirt
+                tileImage = new Image("/tiles/towerDefense_tile050.png");
+                break;
+            case tile042: //hover grass image
+                tileImage = new Image("/tiles/towerDefense_tile042.png");
+                break;
         }
         tile.setImage(tileImage);
         getChildren().add(tile);
-        setOnMouseEntered(e -> {
-            System.out.println("mouse entered");
-            if (type == TileType.tile231){
-                System.out.println("grass type");
-            }
-        });
     }
 }

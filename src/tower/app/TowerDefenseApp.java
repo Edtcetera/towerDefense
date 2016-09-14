@@ -15,9 +15,9 @@ import parser.LevelParser;
  */
 public class TowerDefenseApp extends Application {
 
-    public static final int TILE_SIZE = 100;
-    public static final int WIDTH = 10;
-    public static final int HEIGHT = 10;
+    public static final int TILE_SIZE = 45;
+    public static final int WIDTH = 15;
+    public static final int HEIGHT = 15;
     private LevelParser levelParser;
     private Tile[][] board = new Tile[WIDTH][HEIGHT];
     private Group tileGroup = new Group();

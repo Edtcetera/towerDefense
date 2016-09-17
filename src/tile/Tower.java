@@ -1,5 +1,6 @@
 package tile;
 
+import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
@@ -18,8 +19,8 @@ public class Tower extends Node {
     private TowerType type;
     private Node[][] board;
     private Group tileGroup;
-    private int boardX;
-    private int boardY;
+    private int locX;
+    private int locY;
 
     private void setTowerType(TowerType type){
         switch(type){
@@ -33,6 +34,7 @@ public class Tower extends Node {
                 sprite = new Image("/tiles/towerDefense_tile180.png");
         }
         tile.setImage(sprite);
+        getChildren().add(tile);
     }
 
     private TowerType getTowerType(){
@@ -41,9 +43,8 @@ public class Tower extends Node {
 
 
 
-    private void addTower(ImageView tile){
-        board[boardX][boardY] = tile;
-        TowerDefenseApp.tileGroup.getChildren().add(tile);
+    private void addTower(Tower tile, Node[][] board){
+
     }
 
     /**
@@ -54,15 +55,22 @@ public class Tower extends Node {
      * @param y
      */
     public Tower(TowerType type, int x, int y){
-        this.board = tower.app.TowerDefenseApp.board;
+        super();
+        health = 100;
+        locX = x;
+        locY = y;
+        this.type = type;
+        setWidth(TILE_SIZE);
+        setHeight(TILE_SIZE);
+
+        relocate(x * TILE_SIZE, y * TILE_SIZE);
+
         tile = new ImageView();
         tile.setFitHeight(TILE_SIZE);
         tile.setPreserveRatio(true);
-        boardX = x;
-        boardY = y;
-        health = 100;
         setTowerType(type);
-        addTower(tile);
+
+        hoverImage();
     }
 
     private void hoverImage(){

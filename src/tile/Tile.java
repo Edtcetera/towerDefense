@@ -6,6 +6,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 
 import static tower.app.TowerDefenseApp.TILE_SIZE;
+import static tower.app.TowerDefenseApp.tileGroup;
 
 /**
  * Created by Edward on 8/26/2016.
@@ -89,7 +90,22 @@ public class Tile extends Node {
     private void towerMouseListener(){
         setOnMouseClicked(e -> {
             if (isGrass()){
-                Tower foundation = new Tower(TowerType.tile180, locX, locY);
+                //Tower foundation = new Tower(TowerType.tile180, locX, locY);
+                //TODO: produces foundation at 0,0 coordinates, need to move it
+
+                //ImageView foundationIv = new ImageView();
+                ImageView towerIv = new ImageView();
+                towerIv.setFitHeight(TILE_SIZE);
+                //foundationIv.setFitHeight(TILE_SIZE);
+                towerIv.setPreserveRatio(true);
+                //foundationIv.setPreserveRatio(true);
+                towerIv.setImage(new Image("/tiles/towerDefense_tile250.png"));
+                //foundationIv.setImage(new Image("/tiles/towerDefense_tile180.png"));
+
+                //foundationIv.relocate(locX * TILE_SIZE, locY * TILE_SIZE);
+                towerIv.relocate(locX * TILE_SIZE, locY * TILE_SIZE);
+                tileGroup.getChildren().add(towerIv);
+
             }
         });
     }

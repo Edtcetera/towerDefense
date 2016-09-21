@@ -34,7 +34,7 @@ public class TowerDefenseApp extends Application {
 
     private Parent createContent(){
         //TODO: scale to a level index file which points to different levels
-        levelParser = new LevelParser("./assets/levels/level02.txt" , tileGroup, board);
+        levelParser = new LevelParser("./assets/levels/level01.txt" , tileGroup, board);
         pathFinder = new Pathfinder();
         Pane root = new Pane();
         root.setPrefSize(WIDTH * TILE_SIZE, HEIGHT * TILE_SIZE);
@@ -58,11 +58,12 @@ public class TowerDefenseApp extends Application {
                 board[goalX][goalY],board);
 
         //Optional - displays path
-
+        /*
         for (Tile i: path){
             i.setTile(new Image("/tiles/towerDefense_tile042.png"));
         }
         //------------------------
+        */
 
         //TODO: create UI
         return root;

@@ -4,11 +4,14 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import pathfinding.Pathfinder;
 import tile.*;
 import parser.LevelParser;
+
+import java.util.Queue;
 
 /**
  * Created by Edward on 8/26/2016.
@@ -31,7 +34,7 @@ public class TowerDefenseApp extends Application {
 
     private Parent createContent(){
         //TODO: scale to a level index file which points to different levels
-        levelParser = new LevelParser("./assets/levels/level01.txt" , tileGroup, board);
+        levelParser = new LevelParser("./assets/levels/level02.txt" , tileGroup, board);
         pathFinder = new Pathfinder();
         Pane root = new Pane();
         root.setPrefSize(WIDTH * TILE_SIZE, HEIGHT * TILE_SIZE);
@@ -46,9 +49,20 @@ public class TowerDefenseApp extends Application {
         }
 
         levelParser.readLevelFile();
+        int startX = levelParser.getStartX();
+        int startY = levelParser.getStartY();
+        int goalX = levelParser.getGoalX();
+        int goalY = levelParser.getGoalY();
 
-        pathFinder.findPath(board[3][0], board[9][14],board);
+        Queue<Tile> path = pathFinder.findPath(board[startX][startY],
+                board[goalX][goalY],board);
 
+        //Optional - displays path
+
+        for (Tile i: path){
+            i.setTile(new Image("/tiles/towerDefense_tile042.png"));
+        }
+        //------------------------
 
         //TODO: create UI
         return root;

@@ -12,11 +12,9 @@ import java.util.*;
  */
 public class Pathfinder {
 
-    public boolean findPath(Tile start, Tile goal, Tile[][] board) {
-        //start = 3,0
-        //goal = 9,14
-        int oldX = 100;
-        int oldY = 100;
+    public Queue<Tile> findPath(Tile start, Tile goal, Tile[][] board) {
+        int oldX = 999;
+        int oldY = 999;
         int startX = start.getBoardX(); //3
         int startY = start.getBoardY(); //0
         int goalX = goal.getBoardX();   //9
@@ -77,7 +75,7 @@ public class Pathfinder {
         for (Tile i : closedSet){
             System.out.println(i.getBoardX() + "," + i.getBoardY());
         }
-        return true;
+        return closedSet;
     }
 
 

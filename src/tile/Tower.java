@@ -55,7 +55,7 @@ public class Tower extends Node {
      * @param y
      */
     public Tower(TowerType type, int x, int y){
-        super();
+        super(x, y);
         health = 100;
         locX = x;
         locY = y;

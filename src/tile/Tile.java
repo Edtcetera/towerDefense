@@ -50,9 +50,7 @@ public class Tile extends Node {
 
 
     public Tile(TileType type, int x, int y) {
-        super();
-        locX = x;
-        locY = y;
+        super(x,y);
         this.type = type;
         setWidth(TILE_SIZE);
         setHeight(TILE_SIZE);
@@ -90,20 +88,11 @@ public class Tile extends Node {
     private void towerMouseListener(){
         setOnMouseClicked(e -> {
             if (isGrass()){
-                //Tower foundation = new Tower(TowerType.tile180, locX, locY);
-                //TODO: produces foundation at 0,0 coordinates, need to move it
-
-                //ImageView foundationIv = new ImageView();
                 ImageView towerIv = new ImageView();
                 towerIv.setFitHeight(TILE_SIZE);
-                //foundationIv.setFitHeight(TILE_SIZE);
                 towerIv.setPreserveRatio(true);
-                //foundationIv.setPreserveRatio(true);
                 towerIv.setImage(new Image("/tiles/towerDefense_tile250.png"));
-                //foundationIv.setImage(new Image("/tiles/towerDefense_tile180.png"));
-
-                //foundationIv.relocate(locX * TILE_SIZE, locY * TILE_SIZE);
-                towerIv.relocate(locX * TILE_SIZE, locY * TILE_SIZE);
+                towerIv.relocate(super.getBoardX() * TILE_SIZE, super.getBoardY() * TILE_SIZE);
                 tileGroup.getChildren().add(towerIv);
 
             }

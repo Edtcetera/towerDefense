@@ -15,10 +15,28 @@ public abstract class Node extends StackPane {
     private int boardX;
     private int boardY;
 
-    public Node(){
+    public Node(int x, int y){
+        boardX = x;
+        boardY = y;
     }
 
     private void hoverImage(){
+    }
+
+    public int getBoardX(){
+        return boardX;
+    }
+
+    public void setBoardX(int x){
+        boardX = x;
+    }
+
+    public int getBoardY(){
+        return boardY;
+    }
+
+    public void setBoardY(int y){
+        boardY = y;
     }
 
 }

@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import pathfinding.Pathfinder;
 import tile.*;
 import parser.LevelParser;
 
@@ -18,18 +19,20 @@ public class TowerDefenseApp extends Application {
     public static final int WIDTH = 15;
     public static final int HEIGHT = 15;
     private LevelParser levelParser;
-    public static Node[][] board = new Tile[WIDTH][HEIGHT];
+    private Pathfinder pathFinder;
+    public static Tile[][] board = new Tile[WIDTH][HEIGHT];
     public static Group tileGroup = new Group();
     private static Group spriteGroup = new Group();
     private boolean gameStatus = true;
 
-    public static Node[][] getBoard(){
+    public static Tile[][] getBoard(){
         return board;
     }
 
     private Parent createContent(){
         //TODO: scale to a level index file which points to different levels
         levelParser = new LevelParser("./assets/levels/level01.txt" , tileGroup, board);
+        pathFinder = new Pathfinder();
         Pane root = new Pane();
         root.setPrefSize(WIDTH * TILE_SIZE, HEIGHT * TILE_SIZE);
         root.getChildren().addAll(tileGroup);
@@ -43,6 +46,8 @@ public class TowerDefenseApp extends Application {
         }
 
         levelParser.readLevelFile();
+
+        pathFinder.findPath(board[3][0], board[9][14],board);
 
 
         //TODO: create UI

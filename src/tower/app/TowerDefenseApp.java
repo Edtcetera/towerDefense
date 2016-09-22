@@ -8,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import pathfinding.Pathfinder;
+import sprite.Enemy;
 import tile.*;
 import parser.LevelParser;
 
@@ -38,7 +39,7 @@ public class TowerDefenseApp extends Application {
         pathFinder = new Pathfinder();
         Pane root = new Pane();
         root.setPrefSize(WIDTH * TILE_SIZE, HEIGHT * TILE_SIZE);
-        root.getChildren().addAll(tileGroup);
+        root.getChildren().addAll(tileGroup,spriteGroup);
 
         for (int y = 0; y < HEIGHT; y++){
             for (int x = 0; x < WIDTH; x++){
@@ -66,6 +67,8 @@ public class TowerDefenseApp extends Application {
         */
 
         //TODO: create UI
+
+        Enemy enemy = new Enemy(3*TILE_SIZE,0,board,spriteGroup);
         return root;
     }
 

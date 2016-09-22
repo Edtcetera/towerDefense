@@ -55,7 +55,7 @@ public class TowerDefenseApp extends Application {
         int goalX = levelParser.getGoalX();
         int goalY = levelParser.getGoalY();
 
-        Queue<Tile> path = pathFinder.findPath(board[startX][startY],
+        Queue<Tile> enemyPath = pathFinder.findPath(board[startX][startY],
                 board[goalX][goalY],board);
 
         //Optional - displays path
@@ -68,7 +68,7 @@ public class TowerDefenseApp extends Application {
 
         //TODO: create UI
 
-        Enemy enemy = new Enemy(3*TILE_SIZE,0,board,spriteGroup);
+        Enemy enemy = new Enemy(3*TILE_SIZE,0,board,spriteGroup, enemyPath);
         return root;
     }
 

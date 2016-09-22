@@ -16,6 +16,11 @@ import static tower.app.TowerDefenseApp.WIDTH;
  * Created by edwar on 9/9/2016.
  */
 public class LevelParser {
+
+    //TODO: automate side paths and corner placement, so read only dirt 050 tiles
+    //TODO: and automatically generate
+    //TODO: 1. find 3 tile corners and create diagonally corner tiles
+    //TODO: 2. fill in rest of tiles with side walls
     String filePath;
     Group tileGroup;
     Node[][] board;

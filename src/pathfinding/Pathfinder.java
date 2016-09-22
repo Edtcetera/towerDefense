@@ -11,14 +11,18 @@ import java.util.*;
  * Created by edwar on 9/21/2016.
  */
 public class Pathfinder {
+    int oldX;
+    int oldY;
+    int startX;
+    int startY;
+    int goalX;
+    int goalY;
 
     public Queue<Tile> findPath(Tile start, Tile goal, Tile[][] board) {
-        int oldX = 999;
-        int oldY = 999;
-        int startX = start.getBoardX(); //3
-        int startY = start.getBoardY(); //0
-        int goalX = goal.getBoardX();   //9
-        int goalY = goal.getBoardY();   //14
+        startX = start.getBoardX(); //3
+        startY = start.getBoardY(); //0
+        goalX = goal.getBoardX();   //9
+        goalY = goal.getBoardY();   //14
 
         Queue<Tile> closedSet = new LinkedList<>();
         Queue<Tile> openSet = new LinkedList<>();

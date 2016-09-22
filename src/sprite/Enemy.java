@@ -11,6 +11,7 @@ import tile.Node;
 import tile.Tile;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Queue;
 import static tower.app.TowerDefenseApp.TILE_SIZE;
 import static tower.app.TowerDefenseApp.HEIGHT;
@@ -39,7 +40,20 @@ public class Enemy extends Sprite{
         spriteGroup.getChildren().add(super.getIv());
 
 
-        //TODO: refactor this and make it better
+        //TODO: work on this
+        SequentialTransition timeline = new SequentialTransition();
+
+        while(enemyTilePath.isEmpty() == false){
+            Tile pathTile = enemyTilePath.remove();
+            KeyValue pathX = new KeyValue(super.getIv().xProperty(), pathTile.getBoardX() * TILE_SIZE);
+            KeyValue pathY = new KeyValue(super.getIv().yProperty(), pathTile.getBoardY() * TILE_SIZE);
+            KeyFrame pathKf = new KeyFrame(Duration.seconds(0.7), pathX, pathY);
+            Timeline tl = new Timeline(pathKf);
+            timeline.getChildren().add(tl);
+        }
+        timeline.play();
+
+        /*
         //Example timeline sequential animation
         final Timeline timeline1 = new Timeline();
         final Timeline timeline2 = new Timeline();
@@ -62,6 +76,7 @@ public class Enemy extends Sprite{
         sequence.setCycleCount(5);
         sequence.play();
         //======================
+        */
     }
 
     private boolean setFacingDirection() {

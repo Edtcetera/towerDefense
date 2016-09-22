@@ -60,15 +60,16 @@ public class TowerDefenseApp extends Application {
 
         //Optional - displays path
         /*
-        for (Tile i: path){
+        for (Tile i: enemyPath){
             i.setTile(new Image("/tiles/towerDefense_tile042.png"));
         }
-        //------------------------
         */
+        //------------------------
+
 
         //TODO: create UI
 
-        Enemy enemy = new Enemy(3*TILE_SIZE,0,board,spriteGroup, enemyPath);
+        Enemy enemy = new Enemy(3,0,board,spriteGroup, enemyPath);
         return root;
     }
 

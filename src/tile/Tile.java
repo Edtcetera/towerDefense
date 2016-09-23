@@ -1,9 +1,7 @@
 package tile;
 
-import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.StackPane;
 
 import static tower.app.TowerDefenseApp.TILE_SIZE;
 import static tower.app.TowerDefenseApp.tileGroup;
@@ -55,7 +53,9 @@ public class Tile extends Node {
         setWidth(TILE_SIZE);
         setHeight(TILE_SIZE);
 
-        relocate(x * TILE_SIZE, y * TILE_SIZE);
+        locX = x * TILE_SIZE;
+        locY = y * TILE_SIZE;
+        relocate(locX, locY);
 
         tile = new ImageView();
         tile.setFitHeight(TILE_SIZE);
@@ -88,13 +88,7 @@ public class Tile extends Node {
     private void towerMouseListener(){
         setOnMouseClicked(e -> {
             if (isGrass()){
-                ImageView towerIv = new ImageView();
-                towerIv.setFitHeight(TILE_SIZE);
-                towerIv.setPreserveRatio(true);
-                towerIv.setImage(new Image("/tiles/towerDefense_tile250.png"));
-                towerIv.relocate(super.getBoardX() * TILE_SIZE, super.getBoardY() * TILE_SIZE);
-                tileGroup.getChildren().add(towerIv);
-
+                Tower tower = new Tower(TowerType.tile250, locX, locY, tileGroup);
             }
         });
     }

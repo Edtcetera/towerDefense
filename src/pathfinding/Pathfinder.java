@@ -76,9 +76,6 @@ public class Pathfinder {
                 }
             }
         }
-        for (Tile i : closedSet){
-            System.out.println(i.getBoardX() + "," + i.getBoardY());
-        }
         return closedSet;
     }
 

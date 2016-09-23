@@ -7,7 +7,6 @@ import javafx.scene.layout.StackPane;
 /**
  * Created by edwar on 9/13/2016.
  */
-//TODO: complete abstract class
 public abstract class Node extends StackPane {
     private Node[][] board;
     private ImageView tile;

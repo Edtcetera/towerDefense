@@ -25,58 +25,47 @@ public class Enemy extends Sprite{
     private Queue<Tile> enemyTilePath;
     private String facing;
     private Double speed;
+    private Group spriteGroup;
 
-    public Enemy(double x, double y, Node[][] board, Group spriteGroup, Queue<Tile> enemyTilePath) {
+    public Enemy(double x, double y, Node[][] board, Group spriteGroup, Queue<Tile> enemyTilePath, Double speed) {
         super(x, y, board, SpriteType.tile245);
-        this.facing = null;
-        this.speed = null;
+        facing = null;
+        this.speed = speed;
+        health = 100;
+        this.spriteGroup = spriteGroup;
         this.enemyTilePath = enemyTilePath;
         setEnemyImage(super.getType());
         setFacingDirection();
-        health = 100;
+        placeEnemy(x, y, spriteGroup);
+        move(x, enemyTilePath);
+    }
+
+
+    private void destructEnemy() {
+        System.out.println("Enemy destructed");
+    }
+
+    private void placeEnemy(double x, double y, Group spriteGroup) {
         super.getIv().setFitHeight(TILE_SIZE);
         super.getIv().setPreserveRatio(true);
-        super.getIv().relocate(x,y);
+
+        super.getIv().relocate(x*TILE_SIZE,y*TILE_SIZE);
         spriteGroup.getChildren().add(super.getIv());
+    }
 
-
-        //TODO: work on this
+    private void move(double x, Queue<Tile> enemyTilePath) {
         SequentialTransition timeline = new SequentialTransition();
 
         while(enemyTilePath.isEmpty() == false){
             Tile pathTile = enemyTilePath.remove();
-            KeyValue pathX = new KeyValue(super.getIv().xProperty(), pathTile.getBoardX() * TILE_SIZE);
-            KeyValue pathY = new KeyValue(super.getIv().yProperty(), pathTile.getBoardY() * TILE_SIZE);
-            KeyFrame pathKf = new KeyFrame(Duration.seconds(0.7), pathX, pathY);
+            KeyValue pathX = new KeyValue(super.getIv().translateXProperty(), (pathTile.getBoardX()-x)*TILE_SIZE);
+            KeyValue pathY = new KeyValue(super.getIv().translateYProperty(), pathTile.getBoardY()*TILE_SIZE);
+            KeyFrame pathKf = new KeyFrame(Duration.seconds(speed), pathX, pathY);
             Timeline tl = new Timeline(pathKf);
             timeline.getChildren().add(tl);
         }
+
         timeline.play();
-
-        /*
-        //Example timeline sequential animation
-        final Timeline timeline1 = new Timeline();
-        final Timeline timeline2 = new Timeline();
-        final Timeline timeline3 = new Timeline();
-
-        final KeyValue x1 = new KeyValue(super.getIv().xProperty(), 0*TILE_SIZE);
-        final KeyValue y1 = new KeyValue(super.getIv().yProperty(), 7*TILE_SIZE);
-        final KeyFrame kf1 = new KeyFrame(Duration.seconds(3), x1, y1);
-
-        final KeyValue x2 = new KeyValue(super.getIv().xProperty(), 6*TILE_SIZE);
-        final KeyFrame kf2 = new KeyFrame(Duration.seconds(2), x2);
-
-        final KeyValue y3 = new KeyValue(super.getIv().yProperty(), 15*TILE_SIZE);
-        final KeyFrame kf3 = new KeyFrame(Duration.seconds(3), y3);
-
-        timeline1.getKeyFrames().add(kf1);
-        timeline2.getKeyFrames().add(kf2);
-        timeline3.getKeyFrames().add(kf3);
-        SequentialTransition sequence = new SequentialTransition(timeline1, timeline2, timeline3);
-        sequence.setCycleCount(5);
-        sequence.play();
-        //======================
-        */
     }
 
     private boolean setFacingDirection() {
@@ -118,6 +107,7 @@ public class Enemy extends Sprite{
 
             case tile245:
                 super.setImage(new Image("/tiles/towerDefense_tile245.png"));
+                getChildren().add(super.getIv());
                 break;
         }
     }

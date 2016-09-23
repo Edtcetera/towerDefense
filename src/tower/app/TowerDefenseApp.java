@@ -12,6 +12,8 @@ import tile.*;
 import parser.LevelParser;
 
 import java.util.Queue;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by Edward on 8/26/2016.
@@ -57,6 +59,7 @@ public class TowerDefenseApp extends Application {
         Queue<Tile> enemyPath = pathFinder.findPath(board[startX][startY],
                 board[goalX][goalY],board);
 
+
         //Optional - displays path
         /*
         for (Tile i: enemyPath){
@@ -66,9 +69,9 @@ public class TowerDefenseApp extends Application {
         //------------------------
 
 
-        //TODO: create UI
+        Enemy enemy0 = new Enemy(startX, startY, board, spriteGroup, enemyPath, 0.5);
+        root.getChildren().add(enemy0.getIv());
 
-        Enemy enemy = new Enemy(3,0,board,spriteGroup, enemyPath);
         return root;
     }
 

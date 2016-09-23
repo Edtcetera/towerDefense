@@ -19,8 +19,6 @@ public class Tower extends Node {
     private TowerType type;
     private Node[][] board;
     private Group tileGroup;
-    private int locX;
-    private int locY;
 
     private void setTowerType(TowerType type){
         switch(type){
@@ -54,21 +52,19 @@ public class Tower extends Node {
      * @param x
      * @param y
      */
-    public Tower(TowerType type, int x, int y){
+    public Tower(TowerType type, int x, int y, Group tileGroup){
         super(x, y);
         health = 100;
-        locX = x;
-        locY = y;
         this.type = type;
         setWidth(TILE_SIZE);
         setHeight(TILE_SIZE);
-
-        relocate(x * TILE_SIZE, y * TILE_SIZE);
 
         tile = new ImageView();
         tile.setFitHeight(TILE_SIZE);
         tile.setPreserveRatio(true);
         setTowerType(type);
+        tile.relocate(super.getBoardX(), super.getBoardY());
+        tileGroup.getChildren().add(tile);
 
         hoverImage();
     }
